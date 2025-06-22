@@ -1,0 +1,98 @@
+/* Estilos generales para el body y html */
+html, body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4A4A4A; /* Un gris oscuro suave para el texto principal */
+    background-color: #F8F8F8; /* Un blanco muy suave de fondo general */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Ocultar las barras de desplazamiento (si las quieres ocultar) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Estilos para cada sección (cada una será una "página") */
+.section {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    transition: background-color 0.8s ease-in-out;
+    box-shadow: 0 0px 30px rgba(0,0,0,0.03); /* Sombra aún más sutil */
+}
+
+/* Colores de fondo específicos para cada "página" (pasteles suaves y celestes) */
+#seccion-introduccion {
+    background-color: #E0F7FA; /* Azul Celeste muy claro (similar a un cielo despejado) */
+}
+
+#seccion-exploracion {
+    background-color: #FFFDE7; /* Amarillo muy pálido (similar a un rayo de sol suave) */
+}
+
+/* Estilos para los títulos (h1) */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4em;
+    /* Degradado de tonos pastel para el título de Introducción */
+    background: linear-gradient(45deg, #B2EBF2, #80DEEA); /* Tonos de azul aqua pastel */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.08); /* Sombra más suave */
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Degradado específico para el título de la segunda página (más tonos pastel) */
+#seccion-exploracion h1 {
+    background: linear-gradient(45deg, #FFCDD2, #F8BBD0); /* Tonos de rosa pastel */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilos para los párrafos (p) */
+p {
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #616161; /* Un gris un poco más claro para los párrafos */
+    max-width: 680px;
+    margin: 0 auto 30px auto;
+    animation: fadeInUp 1s ease-out;
+    animation-delay: 0.2s;
+}
+
+/* Animaciones (se mantienen igual, son geniales) */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries para hacer la página responsiva en dispositivos pequeños */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 15px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 1.1em;
+    }
+}
